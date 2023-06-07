@@ -44,8 +44,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.265823+00:00",
-      "updated": "2023-05-22T15:52:10.585583+00:00"
+      "created": "2023-05-29T09:37:54.334448+00:00",
+      "updated": "2023-05-29T09:37:54.334448+00:00"
     },
     {
       "id": "accordionItem",
@@ -77,8 +77,28 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.380786+00:00",
-      "updated": "2023-05-22T15:52:30.24036+00:00"
+      "created": "2023-05-29T09:37:53.068159+00:00",
+      "updated": "2023-05-29T09:37:53.068159+00:00"
+    },
+    {
+      "id": "blogpost",
+      "name": "Blogpost",
+      "icon": "screen",
+      "parameters": [],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "content",
+          "name": "content",
+          "allowedComponents": [],
+          "allowAllComponents": true,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": true,
+      "created": "2023-05-31T15:52:07.880382+00:00",
+      "updated": "2023-05-31T15:52:12.033674+00:00"
     },
     {
       "id": "callToAction",
@@ -170,8 +190,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.188497+00:00",
-      "updated": "2023-05-22T15:53:04.243991+00:00",
+      "created": "2023-05-29T09:37:53.154953+00:00",
+      "updated": "2023-05-29T09:37:53.154953+00:00",
       "variants": [
         {
           "id": "alignLeft",
@@ -287,8 +307,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.726344+00:00",
-      "updated": "2023-05-22T15:53:23.810219+00:00",
+      "created": "2023-05-29T09:37:52.927787+00:00",
+      "updated": "2023-05-29T09:37:52.927787+00:00",
       "variants": [
         {
           "id": "backgroundImage",
@@ -368,8 +388,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.809273+00:00",
-      "updated": "2023-05-22T15:53:47.896798+00:00",
+      "created": "2023-05-29T09:37:54.349406+00:00",
+      "updated": "2023-05-29T09:37:54.349406+00:00",
       "variants": [
         {
           "id": "carousel",
@@ -462,8 +482,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.681807+00:00",
-      "updated": "2023-05-22T15:54:09.460342+00:00"
+      "created": "2023-05-29T09:37:54.305299+00:00",
+      "updated": "2023-05-29T09:37:54.305299+00:00"
     },
     {
       "id": "content",
@@ -501,8 +521,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.660374+00:00",
-      "updated": "2023-05-22T15:54:57.783472+00:00"
+      "created": "2023-05-29T09:37:54.358524+00:00",
+      "updated": "2023-05-29T09:37:54.358524+00:00"
     },
     {
       "id": "feature",
@@ -541,8 +561,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.641558+00:00",
-      "updated": "2023-05-22T15:55:15.771198+00:00"
+      "created": "2023-05-29T09:37:54.384982+00:00",
+      "updated": "2023-05-29T09:37:54.384982+00:00"
     },
     {
       "id": "featuredCallout",
@@ -606,8 +626,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.06825+00:00",
-      "updated": "2023-05-22T15:55:28.417588+00:00",
+      "created": "2023-05-29T09:37:54.4548+00:00",
+      "updated": "2023-05-29T09:37:54.4548+00:00",
       "variants": [
         {
           "id": "imageRight",
@@ -757,8 +777,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.720372+00:00",
-      "updated": "2023-05-22T15:55:54.989307+00:00"
+      "created": "2023-05-29T09:37:54.493697+00:00",
+      "updated": "2023-05-29T09:37:54.493697+00:00"
     },
     {
       "id": "footer",
@@ -807,8 +827,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.683658+00:00",
-      "updated": "2023-05-22T15:56:10.254246+00:00"
+      "created": "2023-05-29T09:37:54.424513+00:00",
+      "updated": "2023-05-29T09:37:54.424513+00:00"
     },
     {
       "id": "footerSection",
@@ -840,8 +860,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:23.012412+00:00",
-      "updated": "2023-05-22T15:56:20.608344+00:00"
+      "created": "2023-05-29T09:37:54.424796+00:00",
+      "updated": "2023-05-29T09:37:54.424796+00:00"
     },
     {
       "id": "globalTemplate",
@@ -932,8 +952,8 @@
         }
       ],
       "canBeComposition": true,
-      "created": "2023-05-22T15:31:22.965312+00:00",
-      "updated": "2023-05-22T15:58:58.5008+00:00"
+      "created": "2023-05-29T09:37:54.51129+00:00",
+      "updated": "2023-05-29T09:37:54.51129+00:00"
     },
     {
       "id": "gridContainer",
@@ -1012,8 +1032,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.544744+00:00",
-      "updated": "2023-05-22T15:56:51.8011+00:00"
+      "created": "2023-05-29T09:37:54.442736+00:00",
+      "updated": "2023-05-29T09:37:54.442736+00:00"
     },
     {
       "id": "header",
@@ -1053,8 +1073,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.857847+00:00",
-      "updated": "2023-05-22T15:57:05.399395+00:00"
+      "created": "2023-05-29T09:37:54.297154+00:00",
+      "updated": "2023-05-29T09:37:54.297154+00:00"
     },
     {
       "id": "hero",
@@ -1151,8 +1171,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.465747+00:00",
-      "updated": "2023-05-22T15:59:12.84707+00:00",
+      "created": "2023-05-29T09:37:54.541251+00:00",
+      "updated": "2023-05-29T09:37:54.541251+00:00",
       "variants": [
         {
           "id": "imageLeft",
@@ -1195,8 +1215,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.878642+00:00",
-      "updated": "2023-05-22T15:58:48.654709+00:00"
+      "created": "2023-05-29T09:37:54.510828+00:00",
+      "updated": "2023-05-29T09:37:54.510828+00:00"
     },
     {
       "id": "image",
@@ -1235,8 +1255,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.866549+00:00",
-      "updated": "2023-05-22T15:57:45.143411+00:00"
+      "created": "2023-05-29T09:37:54.467207+00:00",
+      "updated": "2023-05-29T09:37:54.467207+00:00"
     },
     {
       "id": "navigationGroup",
@@ -1274,8 +1294,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.822966+00:00",
-      "updated": "2023-05-22T15:58:17.807045+00:00"
+      "created": "2023-05-29T09:37:53.305964+00:00",
+      "updated": "2023-05-29T09:37:53.305964+00:00"
     },
     {
       "id": "navigationLink",
@@ -1305,8 +1325,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.219368+00:00",
-      "updated": "2023-05-22T15:58:40.374448+00:00",
+      "created": "2023-05-29T09:37:53.754741+00:00",
+      "updated": "2023-05-29T09:37:53.754741+00:00",
       "variants": [
         {
           "id": "header",
@@ -1322,7 +1342,17 @@
       "id": "page",
       "name": "Page",
       "icon": "file-document",
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "pageitem",
+          "name": "pageItem",
+          "type": "sitecoreItem",
+          "helpText": "",
+          "typeConfig": {
+            "allowedTemplate": ""
+          }
+        }
+      ],
       "useTeamPermissions": true,
       "slots": [
         {
@@ -1344,7 +1374,9 @@
             "$test",
             "$loop",
             "$personalization",
-            "image"
+            "image",
+            "sitecorehero",
+            "sitecorecard"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -1355,8 +1387,8 @@
         "type": "page"
       },
       "canBeComposition": true,
-      "created": "2023-05-22T15:31:22.948951+00:00",
-      "updated": "2023-05-22T16:00:51.408033+00:00"
+      "created": "2023-05-29T09:37:54.564525+00:00",
+      "updated": "2023-06-02T17:03:49.102692+00:00"
     },
     {
       "id": "sectionOneColumn",
@@ -1425,8 +1457,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.226038+00:00",
-      "updated": "2023-05-22T15:59:54.155065+00:00"
+      "created": "2023-05-29T09:37:53.733017+00:00",
+      "updated": "2023-05-29T09:37:53.733017+00:00"
     },
     {
       "id": "sectionTwoColumns",
@@ -1475,11 +1507,155 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.486285+00:00",
-      "updated": "2023-05-22T15:59:30.217187+00:00"
+      "created": "2023-05-29T09:37:54.071253+00:00",
+      "updated": "2023-05-29T09:37:54.071253+00:00"
+    },
+    {
+      "id": "sitecorecard",
+      "name": "SitecoreCard",
+      "icon": "screen",
+      "parameters": [
+        {
+          "id": "datasource",
+          "name": "DataSource",
+          "type": "sitecoreItem",
+          "helpText": "",
+          "typeConfig": {
+            "allowedTemplate": "{2E4954F5-7466-4D02-8D18-D3A8362D27C7}",
+            "datasourceLocation": "{2FCDB804-A54F-4261-BC20-56C0E7B2D25E}"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-06-02T17:03:00.694675+00:00",
+      "updated": "2023-06-02T17:03:00.694675+00:00"
+    },
+    {
+      "id": "sitecorehero",
+      "name": "SitecoreHero",
+      "icon": "template",
+      "parameters": [
+        {
+          "id": "dataSource",
+          "name": "Data Source",
+          "type": "sitecoreItem",
+          "helpText": "",
+          "typeConfig": {
+            "allowedTemplate": "{2E4954F5-7466-4D02-8D18-D3A8362D27C7}",
+            "datasourceLocation": "{2FCDB804-A54F-4261-BC20-56C0E7B2D25E}"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-05-30T13:03:28.85858+00:00",
+      "updated": "2023-06-02T11:30:42.791073+00:00"
     }
   ],
   "compositions": [
+    {
+      "composition": {
+        "_name": "Home2",
+        "_id": "1465adc9-7863-447b-a33e-f567cf720a3c",
+        "_slug": "home2",
+        "type": "blogpost",
+        "slots": {
+          "content": [
+            {
+              "_id": "f44dd748-7c46-4e76-9c03-6757715ca74e",
+              "type": "hero",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Test"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Test"
+                }
+              }
+            },
+            {
+              "_id": "cbe80b19-7c2d-4246-8e00-a5da80de4f83",
+              "type": "content",
+              "parameters": {
+                "text": {
+                  "type": "text",
+                  "value": "asdadads"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "asdads"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-31T15:52:25.628336+00:00",
+      "modified": "2023-05-31T15:53:08.926025+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Interior Design",
+        "_id": "15bc9240-5c40-4f4a-8f2b-40b58d6b9d9c",
+        "_slug": "interior-design",
+        "type": "page",
+        "parameters": {
+          "pageitem": {
+            "type": "sitecoreItem",
+            "value": "{D316BB7D-CB59-49D9-8F8D-64AC957225B9}"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "baf09e13-f6cb-4cad-a184-f22d130e3505",
+              "type": "sitecorecard",
+              "parameters": {
+                "datasource": {
+                  "type": "sitecoreItem",
+                  "value": "{D316BB7D-CB59-49D9-8F8D-64AC957225B9}"
+                }
+              }
+            },
+            {
+              "_id": "9be98617-bd08-4e38-a59a-23d816259732",
+              "type": "callToAction",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "call to action on top"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "as"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-06-02T16:58:45.769866+00:00",
+      "modified": "2023-06-02T17:33:13.45069+00:00",
+      "pattern": false
+    },
     {
       "composition": {
         "_name": "Global",
@@ -1914,6 +2090,43 @@
     },
     {
       "composition": {
+        "_name": "specific wildcard item",
+        "_id": "1cbfa237-1b4d-4092-bbb9-fecfd8d66008",
+        "_slug": "specific-wildcard-item",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "0e599ea6-62e2-476b-86ee-ebc015e065e9",
+              "type": "featuredCallout",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Im not a HERO :D "
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "This page contains a featured callout instead of a Hero :) "
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "overriden "
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-29T10:18:35.150705+00:00",
+      "modified": "2023-05-29T10:19:30.683532+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
         "_name": "Images",
         "_id": "2516f825-86ee-4e8a-a686-8ce31e49adb6",
         "_slug": "images",
@@ -2241,6 +2454,37 @@
       },
       "created": "2023-05-02T13:55:30.560245+00:00",
       "modified": "2023-05-03T12:16:21.551859+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "*",
+        "_id": "3b5b708a-5186-485b-919c-468b4b3cd13f",
+        "_slug": "wildcard-slug",
+        "type": "page",
+        "parameters": {
+          "pageitem": {
+            "type": "sitecoreItem",
+            "value": "{D5F485C4-AC71-4108-893F-21D3DBB49BCD}"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "6854b9af-0512-47b7-835e-fc98cd050eb1",
+              "type": "sitecorehero",
+              "parameters": {
+                "dataSource": {
+                  "type": "sitecoreItem",
+                  "value": "{D5F485C4-AC71-4108-893F-21D3DBB49BCD}"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-06-02T14:59:51.827649+00:00",
+      "modified": "2023-06-02T18:14:44.452784+00:00",
       "pattern": false
     },
     {
@@ -2769,10 +3013,6 @@
                   "type": "text",
                   "value": "Essential set of components you need to start building personalizable web experiences with Uniform."
                 },
-                "eyebrowText": {
-                  "type": "text",
-                  "value": ""
-                },
                 "primaryButtonCopy": {
                   "type": "text",
                   "value": "Browse THE components"
@@ -3288,10 +3528,18 @@
               }
             }
           ]
+        },
+        "_dataResources": {
+          "Album Page Content": {
+            "type": "albumPage",
+            "variables": {
+              "sc_itemId": "{6ADEF144-6C4A-471A-B785-B32924237F07}"
+            }
+          }
         }
       },
-      "created": "2023-05-02T13:55:28.879669+00:00",
-      "modified": "2023-05-03T11:56:02.832755+00:00",
+      "created": "2023-05-29T09:37:57.931156+00:00",
+      "modified": "2023-05-29T12:53:44.679743+00:00",
       "pattern": false
     },
     {
@@ -4763,6 +5011,162 @@
     },
     {
       "composition": {
+        "_name": "Interior Design",
+        "_id": "94e5357c-74e9-453f-8cee-1f7c8958d52b",
+        "_slug": "interior-design",
+        "type": "page",
+        "parameters": {
+          "pageitem": {
+            "type": "sitecoreItem",
+            "value": "{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "b583f367-d5d4-4aae-9d42-377d61309667",
+              "type": "sitecorecard",
+              "parameters": {
+                "datasource": {
+                  "type": "sitecoreItem",
+                  "value": "{D316BB7D-CB59-49D9-8F8D-64AC957225B9}"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-06-02T17:44:59.701769+00:00",
+      "modified": "2023-06-02T17:57:36.334104+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Accordion Pattern",
+        "_id": "aa0fa2cf-d630-498a-9ed5-4a60129d6543",
+        "type": "accordion",
+        "parameters": {
+          "title": {
+            "type": "text",
+            "value": "Accordion "
+          },
+          "description": {
+            "type": "text",
+            "value": "Gonna expand to see"
+          }
+        },
+        "slots": {
+          "items": [
+            {
+              "_id": "0b24c167-67aa-46fb-a8b1-458d38328757",
+              "type": "accordionItem",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Accordion Item 1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "qwwert"
+                }
+              }
+            },
+            {
+              "_id": "d3ea2518-ccdc-4a34-9dd1-08debda29319",
+              "type": "accordionItem",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Accordion Item 2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-31T14:54:19.095569+00:00",
+      "modified": "2023-05-31T14:55:16.314807+00:00",
+      "pattern": true
+    },
+    {
+      "composition": {
+        "_name": "*",
+        "_id": "b72aec12-37e7-4901-9f09-530309eeda6f",
+        "_slug": "wildcard-slug",
+        "type": "page",
+        "parameters": {
+          "pageitem": {
+            "type": "sitecoreItem",
+            "value": "{D5F485C4-AC71-4108-893F-21D3DBB49BCD}"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "8ac4e71e-28e8-49a0-8d25-7cd5ddd1c562",
+              "type": "hero",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Hero for wildcard component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "This is how every wildcard page will look like on your site. \n\nIf you want to change the look of some specific pages, create a specific node in project map under `wildcards` placeholder"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "eyebrow text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Let's go and check how it looks like"
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                }
+              }
+            },
+            {
+              "_id": "4b999943-2ae4-4627-aacf-85ef53f34903",
+              "type": "sitecorehero",
+              "parameters": {
+                "dataSource": {
+                  "type": "sitecoreItem",
+                  "value": "{A766B52E-D89A-4880-9286-0F4A91DB39B8}"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-29T10:15:38.624603+00:00",
+      "modified": "2023-06-02T14:15:51.337457+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "wildcards",
+        "_id": "d164a615-0af6-4666-926e-b3c3e9c5622b",
+        "_slug": "wildcards",
+        "type": "page",
+        "parameters": {}
+      },
+      "created": "2023-05-29T10:14:09.142962+00:00",
+      "modified": "2023-05-29T10:14:09.142962+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
         "_name": "Accordions",
         "_id": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
         "_slug": "accordions",
@@ -5090,6 +5494,31 @@
       "created": "2023-05-04T08:07:12.689165+00:00",
       "modified": "2023-05-17T08:54:08.263688+00:00",
       "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Home",
+        "_id": "fd6895b3-2670-4156-8bd8-5c3b81a29848",
+        "_slug": "home",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "189c69d7-2303-4659-a7d1-3e19b2b4a4f2",
+              "type": "sitecorehero",
+              "parameters": {
+                "dataSource": {
+                  "type": "sitecoreItem",
+                  "value": "{6ADEF144-6C4A-471A-B785-B32924237F07}"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-30T13:01:56.4368+00:00",
+      "modified": "2023-05-30T13:22:22.449667+00:00",
+      "pattern": false
     }
   ],
   "projectMaps": [
@@ -5102,36 +5531,13 @@
   ],
   "projectMapNodes": [
     {
-      "id": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
-      "name": "Home",
-      "type": "composition",
+      "id": "3a15f0ff-9803-40fb-83f3-11877736ddd3",
+      "name": "wildcards",
+      "type": "placeholder",
       "data": {},
       "order": 500,
-      "path": "/",
-      "compositionId": "552a8a72-6c47-4993-bc45-f0148ea79904",
-      "pathSegment": "",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
-    {
-      "id": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
-      "name": "Components",
-      "type": "composition",
-      "data": {},
-      "order": 400,
-      "path": "/components",
-      "compositionId": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
-      "pathSegment": "components",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
-    {
-      "id": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
-      "name": "Accordions",
-      "type": "composition",
-      "data": {},
-      "order": 100,
-      "path": "/components/accordions",
-      "compositionId": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
-      "pathSegment": "accordions",
+      "path": "/wildcards",
+      "pathSegment": "wildcards",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
@@ -5146,6 +5552,39 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
+      "id": "435b7a20-cf5a-4e2a-a1ce-f674fe7ee044",
+      "name": "Content Blocks",
+      "type": "composition",
+      "data": {},
+      "order": 0,
+      "path": "/components/content-blocks",
+      "compositionId": "92392ca2-400b-46bb-8892-b775a150b124",
+      "pathSegment": "content-blocks",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+      "name": "Home",
+      "type": "composition",
+      "data": {},
+      "order": 500,
+      "path": "/",
+      "compositionId": "552a8a72-6c47-4993-bc45-f0148ea79904",
+      "pathSegment": "",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
+      "name": "Accordions",
+      "type": "composition",
+      "data": {},
+      "order": 100,
+      "path": "/components/accordions",
+      "compositionId": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
+      "pathSegment": "accordions",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
       "id": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
       "name": "Card Blocks",
       "type": "composition",
@@ -5157,14 +5596,25 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
-      "id": "435b7a20-cf5a-4e2a-a1ce-f674fe7ee044",
-      "name": "Content Blocks",
+      "id": "89816426-895a-43c7-b08a-e8ce333632c9",
+      "name": "*",
       "type": "composition",
       "data": {},
-      "order": 0,
-      "path": "/components/content-blocks",
-      "compositionId": "92392ca2-400b-46bb-8892-b775a150b124",
-      "pathSegment": "content-blocks",
+      "order": 500,
+      "path": "/courses/wildcard-slug",
+      "compositionId": "3b5b708a-5186-485b-919c-468b4b3cd13f",
+      "pathSegment": "wildcard-slug",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "93738600-2ae3-43a7-928d-0bd441da5519",
+      "name": "Interior Design",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/courses/interior-design",
+      "compositionId": "94e5357c-74e9-453f-8cee-1f7c8958d52b",
+      "pathSegment": "interior-design",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
@@ -5179,14 +5629,78 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
-      "id": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
-      "name": "Heroes",
+      "id": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+      "name": "Layouts & Containers",
+      "type": "composition",
+      "data": {},
+      "order": -100,
+      "path": "/components/layouts-container",
+      "compositionId": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
+      "pathSegment": "layouts-container",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "af638d23-5469-4522-a052-80c1894404b3",
+      "name": "*",
+      "type": "composition",
+      "data": {},
+      "order": 300,
+      "path": "/wildcards/wildcard-slug",
+      "compositionId": "b72aec12-37e7-4901-9f09-530309eeda6f",
+      "pathSegment": "wildcard-slug",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "bd67f8c7-e67e-4dca-b34f-41621f2bf1e2",
+      "name": "specific wildcard item",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/wildcards/specific-wildcard-item",
+      "compositionId": "1cbfa237-1b4d-4092-bbb9-fecfd8d66008",
+      "pathSegment": "specific-wildcard-item",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "befd94a9-62fb-4849-8f41-8c6f9fccdeb9",
+      "name": "courses",
+      "type": "placeholder",
+      "data": {},
+      "order": 200,
+      "path": "/courses",
+      "pathSegment": "courses",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "c60f0b39-223c-43c6-966d-88b9f5c18b29",
+      "name": "sitecore",
+      "type": "placeholder",
+      "data": {},
+      "order": 600,
+      "path": "/sitecore",
+      "pathSegment": "sitecore",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+      "name": "Components",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/components",
+      "compositionId": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
+      "pathSegment": "components",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "db64d5e4-a9b0-4169-aa8f-5c3ae6bd8398",
+      "name": "Home",
       "type": "composition",
       "data": {},
       "order": 500,
-      "path": "/components/heroes",
-      "compositionId": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
-      "pathSegment": "heroes",
+      "path": "/sitecore/enhancing/home",
+      "compositionId": "fd6895b3-2670-4156-8bd8-5c3b81a29848",
+      "pathSegment": "home",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
@@ -5201,14 +5715,24 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
-      "id": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
-      "name": "Layouts & Containers",
+      "id": "f454c0d6-72c0-4519-ba0a-40a9fc7f51c7",
+      "name": "enhancing",
+      "type": "placeholder",
+      "data": {},
+      "order": 500,
+      "path": "/sitecore/enhancing",
+      "pathSegment": "enhancing",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+      "name": "Heroes",
       "type": "composition",
       "data": {},
-      "order": -100,
-      "path": "/components/layouts-container",
-      "compositionId": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
-      "pathSegment": "layouts-container",
+      "order": 500,
+      "path": "/components/heroes",
+      "compositionId": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
+      "pathSegment": "heroes",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     }
   ]
