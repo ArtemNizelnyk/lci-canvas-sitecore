@@ -1,16 +1,13 @@
 import { enhance, EnhancerBuilder, RootComponentInstance } from '@uniformdev/canvas';
-import {
-    createItemEnhancer,
-    getPageItemId,
-} from '@uniformdev/canvas-sitecore';
-import { Logger, throwException } from '@uniformdev/canvas-sitecore';
+import { createItemEnhancer, getPageItemId } from '@uniformdev/canvas-sitecore';
+import { Logger } from '@uniformdev/canvas-sitecore';
 
 const consoleLogger: Logger = {
-    trace: (...message: any[]) => console.log(message.join('\r')),
-    debug: (...message: any[]) => console.log(message.join('\r')),
-    info: (...message: any[]) => console.log(message.join('\r')),
-    warn: (...message: any[]) => console.log(message.join('\r')),
-    error: (...message: any[]) => console.log(message.join('\r')),
+  trace: (...message: any[]) => console.log(message.join('\r')),
+  debug: (...message: any[]) => console.log(message.join('\r')),
+  info: (...message: any[]) => console.log(message.join('\r')),
+  warn: (...message: any[]) => console.log(message.join('\r')),
+  error: (...message: any[]) => console.log(message.join('\r')),
 };
 
 export const enhanceComposition = async ({
@@ -22,9 +19,8 @@ export const enhanceComposition = async ({
   composition: RootComponentInstance;
   preEnhancer?: EnhancerBuilder;
   preview?: boolean;
-  config:any;
+  config: any;
 }) => {
-
   if (preEnhancer) {
     await enhance({
       composition,
@@ -34,24 +30,19 @@ export const enhanceComposition = async ({
     });
   }
 
+  const enhancerBuilder = new EnhancerBuilder();
 
-
-    const enhancerBuilder = new EnhancerBuilder();
-
-    let pageId = getPageItemId({ composition });
-    //let pageId="A766B52E-D89A-4880-9286-0F4A91DB39B8";
-    if (pageId) {
-        const dataSourceItemEnhancer = createItemEnhancer({
-            pageId,
-            config,
-            isPreview:preview,
-            logger: preview ? consoleLogger : undefined,
-            modelOnly: false,
-        });
-        enhancerBuilder.parameterType('sitecoreItem', dataSourceItemEnhancer);
-    }
-
-
+  const pageId = getPageItemId({ composition });
+  if (pageId) {
+    const dataSourceItemEnhancer = createItemEnhancer({
+      pageId,
+      config,
+      isPreview: preview,
+      logger: preview ? consoleLogger : undefined,
+      modelOnly: false,
+    });
+    enhancerBuilder.parameterType('sitecoreItem', dataSourceItemEnhancer);
+  }
 
   await enhance({
     composition,
@@ -59,5 +50,4 @@ export const enhanceComposition = async ({
     context: { preview },
     onErrors: errors => console.warn('Failed to enhance the composition:', errors),
   });
-
 };

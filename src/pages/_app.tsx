@@ -4,6 +4,7 @@ import { UniformContext } from '@uniformdev/context-react';
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
 import '@/styles/globals.css';
+import RegionContextProvider from '@/context/RegionProvider';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -14,7 +15,9 @@ const App = ({ Component, pageProps }: AppProps) => (
       <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />
     </Head>
     <UniformContext context={createUniformContext()}>
+    <RegionContextProvider>
       <Component {...pageProps} />
+    </RegionContextProvider>
     </UniformContext>
   </>
 );

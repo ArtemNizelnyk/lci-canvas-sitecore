@@ -1,7 +1,12 @@
-import { CanvasClient, CANVAS_PUBLISHED_STATE, CANVAS_DRAFT_STATE, EnhancerBuilder, RootComponentInstance } from '@uniformdev/canvas';
+import {
+  CanvasClient,
+  CANVAS_PUBLISHED_STATE,
+  CANVAS_DRAFT_STATE,
+  EnhancerBuilder,
+  RootComponentInstance,
+} from '@uniformdev/canvas';
 import { ProjectMapClient } from '@uniformdev/project-map';
 import { enhanceComposition } from './enhanceComposition';
-import { CANVAS_SITECORE_PARAMETER_TYPES } from '@uniformdev/canvas-sitecore';
 
 export const globalCompositionId = '179bfdf3-be89-4d63-949c-53a58f3eff19';
 
@@ -66,58 +71,57 @@ export const getCompositionById = async (id: string, context: { preview: boolean
 
 export const getState = (preview: boolean | undefined) =>
   process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE;
-
 export const getCompositionProps = async ({
-    path,
-    preEnhancer,
-    defaultPath,
-    context,
-    config,
-    pageId,
-    previewComposition
-  }: {
-    path: string;
-    preEnhancer:EnhancerBuilder|undefined;
-    defaultPath?: string;
-    context: { preview?: boolean };
-    config: any;
-    pageId:string;
-    previewComposition?:any;
-  }): Promise<{ composition: RootComponentInstance;}> => {
-    if (!path) throw new Error('Composition path is not provided');
+  path,
+  preEnhancer,
+  defaultPath,
+  context,
+  config,
+  previewComposition,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  locale,
+}: {
+  path: string;
+  preEnhancer: EnhancerBuilder | undefined;
+  defaultPath?: string;
+  context: { preview?: boolean };
+  config: any;
+  previewComposition?: any;
+  locale: any;
+}): Promise<{ composition: RootComponentInstance }> => {
+  if (!path) throw new Error('Composition path is not provided');
 
-    const canvasClient=getCanvasClient();
-    if (!canvasClient) throw new Error('Canvas client is not configured');
-  
-    const { preview } = context || {};
-    // 1. fetch canvas composition by node path
-    if(previewComposition)
-    {
-      await enhanceComposition({composition:previewComposition, config})
-      return previewComposition;
-    }
-    const {composition}  =  await canvasClient
-      .getCompositionByNodePath({ projectMapNodePath: path, state: getState(preview) })
-      .catch(async(e) =>  {
-        console.log(e)
-        if (e.statusCode !== 404 || !defaultPath) throw e;
-        const fallback = await canvasClient.getCompositionByNodePath({
-          projectMapNodePath: defaultPath,
-          state: getState(preview),
-        });
-        //if(!context.preview)
-       // {
-          // fallback.composition.parameters = fallback.composition.parameters??{}
-          // fallback.composition.parameters["pageItem"]={value:pageId, type:CANVAS_SITECORE_PARAMETER_TYPES[0]}
-        //}
+  const canvasClient = getCanvasClient();
+  if (!canvasClient) throw new Error('Canvas client is not configured');
 
+  const { preview } = context || {};
+  // 1. if composition comes from preview we don't need to fetch it.
+  if (previewComposition) {
+    await enhanceComposition({ composition: previewComposition, config });
 
-        return fallback;
+    //console.log("enhanced composition preview", JSON.stringify(previewComposition,null,2))
+    return previewComposition;
+  }
+  //2. fetch composition from uniform.app via the path, if doesn't exist - fetch the wildcard composition
+  const { composition } = await canvasClient
+    .getCompositionByNodePath({ projectMapNodePath: path, state: getState(preview) })
+    .catch(async e => {
+      console.log('error', e);
+      if (e.statusCode !== 404 || !defaultPath) throw e;
+      const fallback = await canvasClient.getCompositionByNodePath({
+        projectMapNodePath: defaultPath,
+        state: getState(preview),
       });
-     
-        await enhanceComposition({ composition, preEnhancer ,config });
-        console.log("com", JSON.stringify(composition,null,2))
-        return {composition};
-  
-     
-  };
+      //if(!context.preview)
+      // {
+      // fallback.composition.parameters = fallback.composition.parameters??{}
+      // fallback.composition.parameters["pageItem"]={value:pageId, type:CANVAS_SITECORE_PARAMETER_TYPES[0]}
+      //}
+
+      return fallback;
+    });
+
+  await enhanceComposition({ composition, preEnhancer, config });
+  //  console.log("enhanced composition normal", JSON.stringify(composition,null,2))
+  return { composition };
+};

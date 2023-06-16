@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const regions = require('./src/constants/localizationConfig.json');
+
 const nextConfig = {
   reactStrictMode: true,
   serverRuntimeConfig:{
@@ -11,6 +13,10 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false,
+  },
+  i18n:{
+    defaultLocale:"en",
+    locales: [...new Set(regions.map(region => region.locales).flat())],
   },
   env: {
     NEXT_PUBLIC_APP_VERSION: process.env.npm_package_version,

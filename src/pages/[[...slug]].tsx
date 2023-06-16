@@ -1,7 +1,7 @@
 import { withUniformGetStaticProps, withUniformGetStaticPaths } from '@uniformdev/canvas-next/project-map';
 import { getCanvasClient, getCompositionById, getProjectMapClient, globalCompositionId } from '@/utils/canvas';
 import Page2 from '@/components/Page2';
-import Page from './global';
+//import Page from './global';
 
 export const getStaticProps = withUniformGetStaticProps({
   param: 'slug',
@@ -47,6 +47,9 @@ export const getStaticProps = withUniformGetStaticProps({
 export const getStaticPaths = async () => {
   const nodePaths = await withUniformGetStaticPaths({
     preview: process.env.NODE_ENV === 'development',
+    requestOptions: {
+      depth: 1,
+    },
     client: getProjectMapClient(),
   });
   const { paths } = await nodePaths();
@@ -56,7 +59,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const CanvasPage = (props) => {
+const CanvasPage = (props: any) => {
   if (true) {
     return Page2(props);
   }
@@ -65,5 +68,5 @@ const CanvasPage = (props) => {
   //   return Page(props);
   // }
   //some default logic
-}
+};
 export default CanvasPage;

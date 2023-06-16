@@ -1,0 +1,10 @@
+[
+    {
+      "region": "NA",
+      "locales": ["en"]
+    },
+    {
+      "region": "EU",
+      "locales": ["fr", "en"]
+    }
+  ]
