@@ -35,13 +35,13 @@ declare namespace Types {
     | 'asap'
     | 'antonio'
     | 'maven_pro';
-  
-    interface Wildcard {
-      slug?: string;
-      id?: string;
-      title?: string;
-      description?: string;
-      thumbnail?:string; 
-      content?: string;
-    }
+
+  interface Wildcard {
+    slug?: string;
+    id?: string;
+    title?: string;
+    description?: string;
+    thumbnail?: string;
+    content?: string;
+  }
 }

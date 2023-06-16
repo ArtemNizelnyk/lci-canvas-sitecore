@@ -6,19 +6,19 @@ export interface EnhanceParameter<T> {
 }
 
 interface SitecoreItemParam {
-  value:string
+  value: string;
 }
-
 
 // We replacing the default SitecoreItem parameter enhancer with our own based on the product id from slug
 const getSitecoreItemParameterPreEnhancer = (itemId: string) => ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   enhanceOne: async function Enhancer({ parameter }: EnhanceParameter<SitecoreItemParam>) {
     return itemId;
   },
 });
 
-
 export const getPreEnhancer = (itemId: string) => {
-  return new EnhancerBuilder().component("sitecorehero",  (ctx)=> ctx.parameterType('sitecoreItem', getSitecoreItemParameterPreEnhancer(itemId)));
-  
+  return new EnhancerBuilder().component('sitecorehero', ctx =>
+    ctx.parameterType('sitecoreItem', getSitecoreItemParameterPreEnhancer(itemId))
+  );
 };

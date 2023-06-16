@@ -1,46 +1,41 @@
-import {
-  ComponentProps,
-  registerUniformComponent,
-} from "@uniformdev/canvas-react";
-import { createConsoleLogger } from "@uniformdev/canvas-sitecore";
-import{ useUniformCurrentComponent} from "@uniformdev/canvas-react"
+import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import NextImage from 'next/image';
 
 type SitecoreHeroProps = ComponentProps<{
   dataSource?: {
     Title: string;
     Description?: string;
-    ItemID:string;
-    Image:{
-      url:string;
-      alt:string;
-      width:number;
-      height:number;
-    }
+    ItemID: string;
+    Image: {
+      url: string;
+      alt: string;
+      width: number;
+      height: number;
+    };
   };
 }>;
 
-const SitecoreHero: React.FC<SitecoreHeroProps> = ({dataSource}:SitecoreHeroProps) => {
-  const img=dataSource?.Image;
+const SitecoreHero: React.FC<SitecoreHeroProps> = ({ dataSource }: SitecoreHeroProps) => {
+  const img = dataSource?.Image;
   return (
     <div>
-      <NextImage alt="image" src={"https://ngrok-artemn.unfrm.uno/"+img?.url} width={img?.width??1000} height={img?.height??1000} />
-      <h1 className="flex-1 flex justify-center items-center">{dataSource?.Title}</h1>
-     
-      <div
-        className="description"
-        dangerouslySetInnerHTML={{ __html: dataSource?.Description||'' }}
+      <NextImage
+        alt="image"
+        src={'https://ngrok-artemn.unfrm.uno/' + img?.url}
+        width={img?.width ?? 1000}
+        height={img?.height ?? 1000}
       />
+      <h1 className="flex-1 flex justify-center items-center">{dataSource?.Title}</h1>
+
+      <div className="description" dangerouslySetInnerHTML={{ __html: dataSource?.Description || '' }} />
     </div>
   );
 };
 
 // making sure `<UniformSlot />` how to render components with type 'hero'
 registerUniformComponent({
-  type: "sitecorehero",
+  type: 'sitecorehero',
   component: SitecoreHero,
 });
 
 export default SitecoreHero;
-
-

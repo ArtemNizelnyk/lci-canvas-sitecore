@@ -6,6 +6,7 @@ module.exports = {
     '@next/next/no-html-link-for-pages': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'prettier/prettier': 'error',
+    '@typescript-eslint/no-explicit-any':'off',
     'no-underscore-dangle': 'off',
     'import/no-anonymous-default-export': [
       'error',

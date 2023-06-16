@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { UniformComposition, UniformSlot, registerUniformComponent, useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { UniformComposition, UniformSlot } from '@uniformdev/canvas-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 import { HeroVariant } from '@/canvas/Hero';
 import ThemeProvider from './ThemeProvider';
@@ -12,11 +12,11 @@ type PageProps = {
   composition: RootComponentInstance;
 };
 
-const resolvePageComponent = (component: Pick<ComponentInstance, 'type'>) => {
+const resolvePageComponent = (component: Pick<RootComponentInstance, 'type'>) => {
   if (component.type === 'page') {
     return (
       <>
-        <UniformSlot name="pageContent" >
+        <UniformSlot name="pageContent">
           {({ key, child, component }) => {
             // Do not wrap container around the component if it is a container itself
             if (component.type === 'container') return <>{child}</>;
@@ -36,13 +36,12 @@ const resolvePageComponent = (component: Pick<ComponentInstance, 'type'>) => {
           }}
         </UniformSlot>
       </>
-    )
-
+    );
   }
   if (component.type === 'blogpost') {
     return (
       <>
-        <UniformSlot name="content" >
+        <UniformSlot name="content">
           {({ key, child, component }) => {
             // Do not wrap container around the component if it is a container itself
             if (component.type === 'container') return <>{child}</>;
@@ -62,20 +61,14 @@ const resolvePageComponent = (component: Pick<ComponentInstance, 'type'>) => {
           }}
         </UniformSlot>
       </>
-    )
-
+    );
   }
   return null;
-
-}
+};
 
 const Page2: FC<PageProps> = ({ composition, useUniformComposition }) => {
-
-
   return (
     <UniformComposition data={composition} behaviorTracking="onLoad">
-
-
       {({ component }) => {
         const pageComponent = resolvePageComponent(component);
         return (
@@ -83,25 +76,19 @@ const Page2: FC<PageProps> = ({ composition, useUniformComposition }) => {
             <ThemeProvider data={composition} useUniformComposition={useUniformComposition}>
               <UniformSlot name="header" />
               {/* useUniformComposition is always true only for global composition preview */}
-              {useUniformComposition && <h1 className="flex-1 flex justify-center items-center">Page content placeholder</h1>}
+              {useUniformComposition && (
+                <h1 className="flex-1 flex justify-center items-center">Page content placeholder</h1>
+              )}
 
               {Boolean(pageComponent) ? pageComponent : <>Default functionality here</>}
               {/* adding container with padding only to 1+ component in the content slot */}
               <UniformSlot name="footer" />
-            </ThemeProvider >
+            </ThemeProvider>
           </>
-        )
+        );
       }}
-
-    </UniformComposition >
+    </UniformComposition>
   );
 };
 
-const Page2Inner = () => {
-  const composition = useUniformCurrentComposition()
-  return null;
-}
-
 export default Page2;
-
-
