@@ -39,6 +39,7 @@ export const getStaticProps: GetStaticProps<{ preview?: boolean }> = async (cont
     props: {
       ...compositionProps,
       preview: Boolean(preview),
+      locale:locale
     },
   }));
   // .catch(getErrorPageProps);

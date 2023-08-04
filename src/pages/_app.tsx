@@ -15,9 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />
     </Head>
     <UniformContext context={createUniformContext()}>
-    <RegionContextProvider>
       <Component {...pageProps} />
-    </RegionContextProvider>
     </UniformContext>
   </>
 );

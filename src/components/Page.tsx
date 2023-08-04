@@ -7,14 +7,16 @@ import Container, { PaddingSize } from './Container';
 import classNames from 'classnames';
 import RegionSelector from './RegionSelector';
 import LanguageSelector from './LanguageSelector';
+import RegionContextProvider from '@/context/RegionProvider';
 
 type PageProps = {
   preview: boolean;
   useUniformComposition?: boolean;
   composition: RootComponentInstance;
+  locale:string;
 };
 
-const Page: FC<PageProps> = ({ composition, useUniformComposition }) => {
+const Page: FC<PageProps> = ({locale, composition, useUniformComposition }) => {
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: `/api/preview`,
   });
@@ -28,8 +30,11 @@ const Page: FC<PageProps> = ({ composition, useUniformComposition }) => {
       <ThemeProvider data={composition} useUniformComposition={useUniformComposition}>
         {/* Docs: https://docs.uniform.app/reference/packages/uniformdev-canvas-react#slot */}
         <UniformSlot name="header" />
+        <RegionContextProvider locale={locale}>
         <RegionSelector />
         <LanguageSelector />
+        </RegionContextProvider>
+       
         {/* useUniformComposition is always true only for global composition preview */}
         {useUniformComposition && <h1 className="flex-1 flex justify-center items-center">Page content placeholder</h1>}
 
