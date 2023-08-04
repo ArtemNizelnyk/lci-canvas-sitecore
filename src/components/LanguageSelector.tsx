@@ -15,7 +15,7 @@ const LanguageSelector: FC = () => {
     region?: string;
   }[] = useMemo(() => {
     const currentRegionConfig = localizationConfig.find(
-      ({ region: regionName }) => regionName.toLowerCase() === currentRegionName
+      ({ region: regionName }) => regionName.toLowerCase() === currentRegionName.toLowerCase()
     );
     return (
       currentRegionConfig?.locales.map(locale => ({

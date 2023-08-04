@@ -7,7 +7,7 @@ export interface Course {
   ItemID: string;
 }
 
-export function getCoursesFromSitecore(preview: boolean) {
+export function getCoursesFromSitecore(preview: boolean):Promise<Course[]> {
   const client = new SitecoreClient(
     process.env.SITECORE_API_KEY as string,
     process.env.SITECORE_API_URL as string,
@@ -16,7 +16,7 @@ export function getCoursesFromSitecore(preview: boolean) {
 
   const courses = client
     .getItemChildrenByItemId(SitecoreItemIDs.CoursesFolder)
-    .then(response =>
+    .then(response => {
       response.map(
         (item: any): Course => ({
           Campus: item.Campus,
@@ -25,6 +25,8 @@ export function getCoursesFromSitecore(preview: boolean) {
           ItemID: item.ItemID,
         })
       )
+      return response;
+    }
     )
     .catch(error => console.log(error));
 

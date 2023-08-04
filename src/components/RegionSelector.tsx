@@ -15,7 +15,7 @@ const REGIONS_OPTIONS: {
 }));
 
 const RegionSelector: FC = () => {
-  const { push, asPath, locale: currentLocale = 'en-US' } = useRouter();
+  const { push, asPath, locale: currentLocale = 'en' } = useRouter();
   const { region: currentRegionName, updateRegion } = useRegionContext();
   const slug = asPath;
 
@@ -28,7 +28,7 @@ const RegionSelector: FC = () => {
   }, [currentRegionName, currentLocale, updateRegion]);
 
   const selectedOption = useMemo(
-    () => REGIONS_OPTIONS.find(({ value: regionName }) => regionName === currentRegionName),
+    () => REGIONS_OPTIONS.find(({ value: regionName }) => regionName === currentRegionName.toLowerCase()),
     [currentRegionName]
   );
 

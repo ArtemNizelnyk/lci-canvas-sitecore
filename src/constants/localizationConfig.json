@@ -5,6 +5,6 @@
     },
     {
       "region": "EU",
-      "locales": ["fr", "en"]
+      "locales": ["fr-FR", "en"]
     }
   ]
