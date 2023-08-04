@@ -7,5 +7,5 @@ export const InternalCompositionSlugs = {
 };
 
 export const SitecoreItemIDs = {
-  CoursesFolder: '2fcdb804-a54f-4261-bc20-56c0e7b2d25e',
+  CoursesFolder: '8E454F5E-D1CD-408E-AAF6-5A7BB421051F',
 };
