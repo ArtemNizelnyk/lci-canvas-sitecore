@@ -25,7 +25,7 @@ const SitecoreHero: React.FC<SitecoreHeroProps> = ({ dataSource }: SitecoreHeroP
         width={img?.width ?? 1000}
         height={img?.height ?? 1000}
       />
-      <h1 className="flex-1 flex justify-center items-center">{dataSource?.Title}</h1>
+      <h1 className="flex-1 flex justify-center items-center text-black text-x1"><b>{dataSource?.Title}</b></h1>
 
       <div className="description" dangerouslySetInnerHTML={{ __html: dataSource?.Description || '' }} />
     </div>

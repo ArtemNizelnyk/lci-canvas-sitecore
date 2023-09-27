@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import { ComponentProps, UniformSlot, registerUniformComponent } from '@uniformdev/canvas-react';
 
 import classNames from 'classnames';
+import { useRegionContext } from '@/context/RegionProvider';
+import { getTranslatedSlugForProjectMapSlug } from '@/lib/translation/slugTranslationFileSystem';
 
 type LinkProps = ComponentProps<{
   title: string;
@@ -18,6 +20,7 @@ const FooterLink: FC<LinkProps> = ({ title, link }) => (
 
 const HeaderLink: FC<LinkProps> = ({ title, link }) => {
   const router = useRouter();
+
 
   const isCurrentRoute = useMemo(() => {
     const { asPath } = router;

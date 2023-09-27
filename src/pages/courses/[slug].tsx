@@ -1,6 +1,6 @@
 import Page from '@/components/Page';
 import { AppPages, InternalCompositionSlugs } from '@/constants';
-import { getCoursesFromSitecore, Course, getTranslatedSlugFromSitecore } from '@/lib/sitecoreHelper';
+import { getCoursesFromSitecore, Course } from '@/lib/sitecoreHelper';
 import { getCompositionProps } from '@/utils/canvas';
 import { getPreEnhancer } from '@/utils/enhancers/wildcard';
 import { getFormattedPath } from '@/utils/wildcard';

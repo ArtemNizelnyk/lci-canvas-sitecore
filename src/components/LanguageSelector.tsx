@@ -3,11 +3,7 @@ import { useRouter } from 'next/router';
 import { useRegionContext } from '@/context/RegionProvider';
 import Dropdown from './Dropdown';
 import localizationConfig from '../constants/localizationConfig.json';
-import {
-  SiteLocale,
-  getProjectMapSlugForOriginalSlug,
-  getTranslatedSlugForProjectMapSlug,
-} from '@/lib/translation/slugTranslationFileSystem';
+
 import { getTranslatedSlug, translateSlugFromTo } from '@/lib/translation/slugTranslationClient';
 
 const LanguageSelector: FC = () => {
@@ -41,7 +37,7 @@ const LanguageSelector: FC = () => {
     async (selectedLocale?: string) => {
       if (selectedLocale) {
         updateRegion(localesOptions[0].region || '');
-        const translatedNode = translateSlugFromTo(slug, selectedOption.value, selectedLocale);
+        const translatedNode = await translateSlugFromTo(slug, selectedOption.value, selectedLocale);
         await push(`${translatedNode ?? ''}`, '', { locale: selectedLocale });
       }
     },

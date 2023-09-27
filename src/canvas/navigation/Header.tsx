@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import { BaseContainer } from '@/components/Container';
 import { getImageUrl } from '@/utils';
+import RegionSelector from '@/components/RegionSelector';
+import LanguageSelector from '@/components/LanguageSelector';
 
 type HeaderProps = ComponentProps<{
   logo: string | Types.CloudinaryImage;
@@ -15,6 +17,7 @@ const Header: FC<HeaderProps> = ({ logo }) => (
     <BaseContainer>
       <div className="navbar px-0">
         <div className="navbar-start w-full">
+      
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost hover:bg-transparent px-0 lg:hidden">
               <svg
@@ -32,18 +35,23 @@ const Header: FC<HeaderProps> = ({ logo }) => (
                 <UniformSlot name="links" />
               </div>
             </ul>
+            
           </div>
           <Link className="ml-8 lg:ml-0" href="/">
             <Image src={getImageUrl(logo)} width="270" height="43" alt="Uniform" />
           </Link>
         </div>
+        
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1 shrink-0">
             <UniformSlot name="links" />
           </ul>
           <UniformSlot name="iconLinks" />
         </div>
+        <RegionSelector />
+        <LanguageSelector />
       </div>
+      
     </BaseContainer>
   </div>
 );

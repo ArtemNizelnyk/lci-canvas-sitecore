@@ -97,14 +97,14 @@ export const getCompositionProps = async ({
   const { preview } = context || {};
   // 1. if composition comes from preview we don't need to fetch it.
   if (previewComposition) {
-    await enhanceComposition({ composition: previewComposition, config });
+    await enhanceComposition({ composition: previewComposition, config, locale });
 
     //console.log("enhanced composition preview", JSON.stringify(previewComposition,null,2))
     return previewComposition;
   }
   //2. fetch composition from uniform.app via the path, if doesn't exist - fetch the wildcard composition
   const { composition } = await canvasClient
-    .getCompositionByNodePath({ projectMapNodePath: path, state: getState(preview) })
+    .getCompositionByNodePath({ projectMapNodePath: path.toLowerCase(), state: getState(preview) })
     .catch(async e => {
       if (e.statusCode !== 404 || !defaultPath) throw e;
       const fallback = await canvasClient.getCompositionByNodePath({
@@ -120,7 +120,7 @@ export const getCompositionProps = async ({
       return fallback;
     });
 
-  await enhanceComposition({ composition, preEnhancer, config });
+  await enhanceComposition({ composition, preEnhancer, config, locale });
   //  console.log("enhanced composition normal", JSON.stringify(composition,null,2))
   return { composition };
 };
