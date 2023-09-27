@@ -4,7 +4,6 @@ import { UniformContext } from '@uniformdev/context-react';
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
 import '@/styles/globals.css';
-import RegionContextProvider from '@/context/RegionProvider';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

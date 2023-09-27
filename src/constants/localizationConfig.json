@@ -1,9 +1,5 @@
 [
-    {
-      "region": "NA",
-      "locales": ["en"]
-    },
-    {
+   {
       "region": "EU",
       "locales": ["fr-FR", "en"]
     }

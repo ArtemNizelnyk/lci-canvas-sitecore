@@ -106,7 +106,6 @@ export const getCompositionProps = async ({
   const { composition } = await canvasClient
     .getCompositionByNodePath({ projectMapNodePath: path, state: getState(preview) })
     .catch(async e => {
-      console.log('error', e);
       if (e.statusCode !== 404 || !defaultPath) throw e;
       const fallback = await canvasClient.getCompositionByNodePath({
         projectMapNodePath: defaultPath,

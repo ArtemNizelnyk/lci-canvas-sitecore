@@ -20,7 +20,7 @@ const RegionSelector: FC = () => {
   const slug = asPath;
 
   useEffect(() => {
-    const currentRegionConfig = localizationConfig.find(({ region: regionName }) => regionName === currentRegionName);
+    const currentRegionConfig = localizationConfig.find(({ region: regionName }) => regionName === currentRegionName.toLowerCase());
     if (!currentRegionConfig?.locales?.includes(currentLocale)) {
       const updatedRegionConfig = localizationConfig.find(({ locales }) => locales.includes(currentLocale));
       updateRegion(updatedRegionConfig?.region?.toLowerCase() || '');

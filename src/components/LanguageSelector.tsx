@@ -3,6 +3,12 @@ import { useRouter } from 'next/router';
 import { useRegionContext } from '@/context/RegionProvider';
 import Dropdown from './Dropdown';
 import localizationConfig from '../constants/localizationConfig.json';
+import {
+  SiteLocale,
+  getProjectMapSlugForOriginalSlug,
+  getTranslatedSlugForProjectMapSlug,
+} from '@/lib/translation/slugTranslationFileSystem';
+import { getTranslatedSlug, translateSlugFromTo } from '@/lib/translation/slugTranslationClient';
 
 const LanguageSelector: FC = () => {
   const { push, asPath, locale: currentLocale = 'en-US' } = useRouter();
@@ -35,7 +41,8 @@ const LanguageSelector: FC = () => {
     async (selectedLocale?: string) => {
       if (selectedLocale) {
         updateRegion(localesOptions[0].region || '');
-        await push(`${slug ?? ''}`, '', { locale: selectedLocale });
+        const translatedNode = translateSlugFromTo(slug, selectedOption.value, selectedLocale);
+        await push(`${translatedNode ?? ''}`, '', { locale: selectedLocale });
       }
     },
     [localesOptions, push, slug, updateRegion]
